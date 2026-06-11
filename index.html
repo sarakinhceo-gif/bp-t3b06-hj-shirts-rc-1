@@ -1,214 +1,677 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>인문 철학 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #0f172a;
-      --accent-color: #2563eb;
-      --muted-color: #64748b;
-      --border-color: #e2e8f0;
-      --font-swiss: 'Inter', 'Noto Sans KR', sans-serif;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-swiss);
-      line-height: 1.8;
-      letter-spacing: -0.01em;
-      padding: 0 24px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      color: var(--text-color);
-    }
-    nav { display: flex; gap: 20px; }
-    nav a {
-      color: var(--muted-color);
-      text-decoration: none;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--accent-color); }
-    main { padding-bottom: 60px; }
-    .meta-tag {
-      font-size: 0.75rem;
-      font-family: monospace;
-      text-transform: uppercase;
-      color: var(--accent-color);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 2.3rem;
-      font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.02em;
-      color: var(--text-color);
-      margin-bottom: 32px;
-    }
-    .content {
-      font-size: 1.05rem;
-      color: var(--text-color);
-      margin-bottom: 48px;
-      font-weight: 400;
-    }
-    .content p { margin-bottom: 20px; }
-    .juice-link {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .juice-link:hover {
-      background-color: rgba(37, 99, 235, 0.05);
-    }
-    .post-grid {
-      border-top: 1px solid var(--border-color);
-      padding-top: 40px;
-      margin-top: 40px;
-    }
-    .grid-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-color);
-      margin-bottom: 24px;
-    }
-    .posts-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .post-card {
-      border: 1px solid var(--border-color);
-      padding: 24px;
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.2s ease;
-    }
-    .post-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
-    }
-    .post-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .post-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 60px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: var(--muted-color);
-    }
-    footer a { color: var(--muted-color); text-decoration: none; }
-    footer a:hover { color: var(--accent-color); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      h1 { font-size: 1.8rem; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="합정 셔츠룸 추천! 스트리트 브루탈리즘 감성의 셔츠룸, 합정에서 가장 핫한 곳. 전화 010-6279-0862로 지금 예약하세요.">
+<meta name="keywords" content="합정 셔츠룸, 합정 셔츠룸 추천, 합정 셔츠룸 가격, 합정 셔츠룸 후기, 합정 셔츠룸 예약">
+<meta name="bpaas-design-system" content="brutalist-avantgarde">
+<meta name="bpaas-design-theme" content="kr-neon-void">
+<link rel="canonical" href="https://t3b06-hj-shirts-rc-1.vercel.app/">
+<meta property="og:title" content="합정 셔츠룸 추천 | 스트리트 브루탈리즘">
+<meta property="og:description" content="합정 셔츠룸 추천! 거친 감성의 셔츠룸, 합정에서 가장 핫한 곳. 지금 전화 예약하세요.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://t3b06-hj-shirts-rc-1.vercel.app/">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'%3E%3Crect fill='%23000' width='1200' height='630'/%3E%3Ctext x='600' y='350' font-family='Impact' font-size='80' fill='%23ff3b00' text-anchor='middle' dominant-baseline='middle'%3EHJ SHIRT%3C/text%3E%3C/svg%3E">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="합정 셔츠룸 추천 | 스트리트 브루탈리즘">
+<meta name="twitter:description" content="합정 셔츠룸 추천! 거친 감성의 셔츠룸, 합정에서 가장 핫한 곳. 지금 전화 예약하세요.">
+<meta name="twitter:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'%3E%3Crect fill='%23000' width='1200' height='630'/%3E%3Ctext x='600' y='350' font-family='Impact' font-size='80' fill='%23ff3b00' text-anchor='middle' dominant-baseline='middle'%3EHJ SHIRT%3C/text%3E%3C/svg%3E">
+<title>합정 셔츠룸 추천 | 스트리트 브루탈리즘 스타일</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "합정 셔츠룸",
+  "description": "합정 셔츠룸 추천! 스트리트 브루탈리즘 감성의 셔츠룸",
+  "telephone": "+82-10-6279-0862",
+  "url": "https://t3b06-hj-shirts-rc-1.vercel.app/",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "합정",
+    "addressRegion": "서울",
+    "addressCountry": "KR"
+  }
+}
+</script>
+<style>
+/* RESET */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Impact', system-ui, sans-serif;
+  line-height: 1.1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 0.02em;
+}
+img, svg, video {
+  display: block;
+  max-width: 100%;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/* TYPOGRAPHY */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+h1 {
+  font-size: clamp(3.5rem, 12vw, 8rem);
+  line-height: 0.9;
+}
+h2 {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  line-height: 0.95;
+}
+h3 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+/* LAYOUT */
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.full-bleed {
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+.section-gap {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.padding-lr {
+  padding-left: 72px;
+  padding-right: 72px;
+}
+@media (max-width: 768px) {
+  .padding-lr {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .section-gap {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+/* HEADER */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #000;
+  border-bottom: 4px solid #ff3b00;
+  padding: 16px 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80px;
+}
+@media (max-width: 768px) {
+  header {
+    padding: 12px 24px;
+    min-height: 70px;
+  }
+}
+.logo {
+  font-size: 2.5rem;
+  color: #ff3b00;
+  letter-spacing: -0.04em;
+  transform: skew(-5deg);
+  display: inline-block;
+  line-height: 1;
+}
+.logo span {
+  color: #fff;
+}
+/* NAV */
+nav.desktop-nav {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+}
+nav.desktop-nav a {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 8px 0;
+  border-bottom: 3px solid transparent;
+  transition: 0.15s ease;
+}
+nav.desktop-nav a:hover {
+  border-bottom-color: #ff3b00;
+  color: #ff3b00;
+}
+.hamburger {
+  display: none;
+  background: none;
+  border: 3px solid #ff3b00;
+  color: #fff;
+  font-size: 2rem;
+  padding: 4px 12px;
+  cursor: pointer;
+  line-height: 1;
+}
+@media (max-width: 768px) {
+  nav.desktop-nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .mobile-nav-open nav.desktop-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #000;
+    border-bottom: 4px solid #ff3b00;
+    padding: 24px 24px 40px;
+    gap: 24px;
+    align-items: flex-start;
+  }
+  .mobile-nav-open .hamburger {
+    border-color: #fff;
+    color: #ff3b00;
+  }
+}
+/* HERO */
+.hero {
+  background: #000;
+  border-bottom: 4px solid #ff3b00;
+  position: relative;
+  overflow: hidden;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: 72px;
+  margin-bottom: 0;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  width: 60%;
+  height: 80%;
+  background: repeating-linear-gradient(
+    45deg,
+    #ff3b00 0px,
+    #ff3b00 4px,
+    transparent 4px,
+    transparent 12px
+  );
+  opacity: 0.15;
+  transform: rotate(12deg);
+  pointer-events: none;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+.hero h1 {
+  font-size: clamp(4rem, 15vw, 10rem);
+  line-height: 0.85;
+  margin-bottom: 24px;
+  color: #fff;
+  text-shadow: 4px 4px 0 #ff3b00;
+  transform: rotate(-2deg);
+}
+.hero h1 .accent {
+  color: #ff3b00;
+  display: block;
+  transform: skew(-6deg);
+}
+.hero p {
+  font-size: 1.8rem;
+  margin: 32px 0 48px;
+  max-width: 600px;
+  border-left: 6px solid #ff3b00;
+  padding-left: 24px;
+}
+.cta-btn {
+  display: inline-block;
+  background: #ff3b00;
+  color: #000;
+  font-size: 2rem;
+  padding: 20px 48px;
+  border: 4px solid #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: 0.1s ease;
+  transform: skew(-4deg);
+}
+.cta-btn:hover {
+  background: #fff;
+  color: #000;
+  border-color: #ff3b00;
+  transform: skew(0deg) scale(1.02);
+}
+@media (max-width: 768px) {
+  .hero {
+    padding: 48px 24px;
+    min-height: 60vh;
+  }
+  .hero h1 {
+    text-shadow: 3px 3px 0 #ff3b00;
+  }
+  .hero p {
+    font-size: 1.3rem;
+    padding-left: 16px;
+    margin: 24px 0 32px;
+  }
+  .cta-btn {
+    font-size: 1.5rem;
+    padding: 16px 32px;
+  }
+}
+/* INTRO SECTION */
+.intro {
+  background: #000;
+  border-bottom: 4px solid #ff3b00;
+}
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+.intro-grid .left {
+  transform: rotate(1deg);
+}
+.intro-grid .right {
+  transform: rotate(-1deg);
+  margin-top: 48px;
+}
+.intro h2 {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  margin-bottom: 24px;
+}
+.intro h2 .highlight {
+  background: #ff3b00;
+  color: #000;
+  padding: 0 12px;
+  display: inline-block;
+  transform: skew(-6deg);
+}
+.intro p {
+  font-size: 1.4rem;
+  line-height: 1.3;
+  margin-bottom: 32px;
+  border-bottom: 3px solid #ff3b00;
+  padding-bottom: 16px;
+}
+.intro .stat-box {
+  background: #111;
+  border: 4px solid #ff3b00;
+  padding: 32px;
+  transform: skew(-3deg);
+  margin-top: 32px;
+}
+.intro .stat-box p {
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+}
+@media (max-width: 768px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .intro-grid .right {
+    margin-top: 0;
+  }
+  .intro p {
+    font-size: 1.1rem;
+  }
+  .intro .stat-box p {
+    font-size: 1.4rem;
+  }
+}
+/* REVIEWS */
+.reviews {
+  background: #000;
+  border-bottom: 4px solid #ff3b00;
+}
+.reviews h2 {
+  margin-bottom: 72px;
+  text-align: center;
+  transform: rotate(-1deg);
+}
+.reviews h2 span {
+  background: #ff3b00;
+  color: #000;
+  padding: 0 24px;
+  display: inline-block;
+  transform: skew(-8deg);
+}
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 48px;
+}
+.review-card {
+  background: #111;
+  border: 4px solid #fff;
+  padding: 40px 32px;
+  transform: rotate(0.5deg);
+  transition: 0.1s ease;
+  position: relative;
+}
+.review-card:nth-child(2) {
+  transform: rotate(-1.5deg);
+  margin-top: -24px;
+}
+.review-card:nth-child(3) {
+  transform: rotate(1deg);
+  margin-top: 12px;
+}
+.review-card:nth-child(4) {
+  transform: rotate(-0.5deg);
+  margin-top: -12px;
+}
+.review-card:hover {
+  border-color: #ff3b00;
+  transform: scale(1.01) rotate(0deg);
+}
+.review-card .stars {
+  color: #ff3b00;
+  font-size: 2rem;
+  letter-spacing: 4px;
+  margin-bottom: 16px;
+}
+.review-card blockquote {
+  font-size: 1.3rem;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  border-left: 4px solid #ff3b00;
+  padding-left: 16px;
+}
+.review-card .author {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #aaa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid #333;
+  padding-top: 16px;
+}
+.review-card .author .name {
+  color: #ff3b00;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .reviews h2 {
+    margin-bottom: 48px;
+  }
+  .review-grid {
+    gap: 32px;
+  }
+  .review-card {
+    padding: 24px 20px;
+  }
+  .review-card:nth-child(2),
+  .review-card:nth-child(3),
+  .review-card:nth-child(4) {
+    margin-top: 0;
+    transform: rotate(0deg);
+  }
+}
+/* CTA SECTION */
+.cta-section {
+  background: #111;
+  border-top: 4px solid #ff3b00;
+  border-bottom: 4px solid #ff3b00;
+  text-align: center;
+  padding: 72px;
+}
+.cta-section h2 {
+  font-size: clamp(2.8rem, 8vw, 6rem);
+  margin-bottom: 24px;
+  transform: skew(-3deg);
+}
+.cta-section .cta-btn {
+  font-size: 2.2rem;
+  margin-top: 32px;
+}
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 48px 24px;
+  }
+  .cta-section .cta-btn {
+    font-size: 1.6rem;
+  }
+}
+/* FOOTER */
+footer {
+  background: #000;
+  border-top: 4px solid #ff3b00;
+  padding: 48px 72px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+footer .copy {
+  font-size: 1rem;
+  color: #777;
+}
+footer a {
+  border-bottom: 2px solid transparent;
+}
+footer a:hover {
+  border-bottom-color: #ff3b00;
+  color: #ff3b00;
+}
+@media (max-width: 768px) {
+  footer {
+    padding: 32px 24px;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/* UTILITIES */
+.text-accent {
+  color: #ff3b00;
+}
+.skew {
+  transform: skew(-4deg);
+  display: inline-block;
+}
+.brutal-border {
+  border: 4px solid #fff;
+}
+.no-round {
+  border-radius: 0 !important;
+}
+/* HAMBURGER ANIMATION */
+.mobile-nav-open body {
+  overflow: hidden;
+}
+</style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <a href="/" class="logo">KR.GEEK</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="meta-tag">// SWISS ACCENTED GRID SYSTEM</div>
-      <h1>인문 철학 지식 저널 및 아카이브</h1>
-      <div class="content">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>인문 철학</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
+<div class="page">
+  <header id="header">
+    <a href="/" class="logo">합정<span>셔츠룸</span></a>
+    <button class="hamburger" id="hamburger" aria-label="메뉴 열기">☰</button>
+    <nav class="desktop-nav" id="nav">
+      <a href="#intro">소개</a>
+      <a href="#reviews">리뷰</a>
+      <a href="#cta">예약</a>
+      <a href="tel:01062790862">전화</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero full-bleed">
+      <div class="hero-content">
+        <h1>
+          합정
+          <span class="accent">셔츠룸</span>
+          추천
+        </h1>
+        <p>거친 감성, 진짜 셔츠룸.<br>합정에서 가장 핫한 곳.</p>
+        <a href="tel:01062790862" class="cta-btn">지금 예약 →</a>
       </div>
-      
-      
-      <div class="post-grid">
-        <div class="grid-title">Recent Post Archive</div>
-        <div class="posts-list">
-          
-        <a href="posts/normal-1.html" class="post-card">
-          <h3>바뤼흐 스피노자의 에티카(Ethica) 속 동물의 코나투스(Conatus)와 비주류 정서론 분석</h3>
-          <p>네덜란드의 고독한 렌즈 가공 철학자 스피노자의 주저 에티카에서 피력된 코나투스(자신의 존재를 유지하려는 영속적 본성 노력) 개념을 동물에게 투영해 볼 때, 인간 중심적 관점에서 해...</p>
-        </a>
-      
+    </section>
 
-        <a href="posts/normal-2.html" class="post-card">
-          <h3>질 들뢰즈의 리좀(Rhizome) 공간 역학으로 조망한 아날로그 골목길의 인문 구조학</h3>
-          <p>시작과 끝이 규정되지 않고 끊임없이 파편적으로 연결되며 영토를 가로지르는 들뢰즈의 리좀 모델을 격자형 대도시가 아닌 오랜 유기적 골목길의 공간 미학에 적용해 볼 때, 규칙적 구획이...</p>
-        </a>
-      
-
-        <a href="posts/normal-3.html" class="post-card">
-          <h3>중세 스콜라 철학의 영적 통신 논쟁: 천사들의 비물질적 메시지 전달 속도와 주파수</h3>
-          <p>중세 대철학자 토마스 아퀴나스가 주창했던 천사들의 언어(Speech of Angels) 형이상학은 물리적 육체와 공간의 장벽이 없는 순수한 지성적 존재들이 어떻게 공간을 왜곡하고 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="post-card">
-          <h3>지적 인문 철학 독자들을 위해 준비한 백링크 대행 사이트 통합 안내 리포트</h3>
-          <p>신과 만물의 필연적인 자기 보존 욕구와 중심을 인정하지 않는 무정형의 리좀적 골목길 사색을 거치며 시대의 심연을 정밀하게 성찰해 나가는 깊이 있는 지성인분들이라면, 거칠고 차가운 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="post-card">
-          <h3>지적 인문 철학 독자들을 위해 준비한 백링크 대행 사이트 통합 안내 리포트</h3>
-          <p>신과 만물의 필연적인 자기 보존 욕구와 중심을 인정하지 않는 무정형의 리좀적 골목길 사색을 거치며 시대의 심연을 정밀하게 성찰해 나가는 깊이 있는 지성인분들이라면, 거칠고 차가운 ...</p>
-        </a>
-      
+    <!-- INTRO -->
+    <section id="intro" class="intro section-gap padding-lr full-bleed">
+      <div class="intro-grid">
+        <div class="left">
+          <h2>왜 <span class="highlight">합정 셔츠룸</span>인가?</h2>
+          <p>형, 셔츠룸 고르다 보면 다 비슷해 보이지? 근데 여기는 달라. 스트리트 브루탈리즘 감성 그 자체. 입구부터 엣지 있고, 소리 지르고 싶은 인테리어. 셔츠도 퀄리티 미쳤어.</p>
+          <p>내가 합정에서 진짜 추천하는 곳은 딱 하나. 여기야. 분위기에 취하고 싶을 때, 친구랑 크게 놀고 싶을 때, 여기로 와.</p>
+          <div class="stat-box">
+            <p>⭐ 실시간 예약 <span class="text-accent">폭주 중</span></p>
+            <p style="font-size:1.2rem; margin-top:8px;">오늘도 만석 임박</p>
+          </div>
+        </div>
+        <div class="right">
+          <div style="background:#111; border:4px solid #ff3b00; padding:32px; transform:skew(2deg);">
+            <p style="font-size:2.5rem; line-height:1;">👕🔥</p>
+            <p style="font-size:1.6rem; margin-top:16px; border-left:4px solid #ff3b00; padding-left:16px;">
+              <span class="text-accent">DRESS CODE:</span><br>
+              NO SUIT, ALL ATTITUDE
+            </p>
+            <p style="margin-top:24px; font-size:1.2rem; color:#aaa;">문 앞에 셔츠 스타일링 팁도 있어. 인스타용 사진 찍기 좋음.</p>
+          </div>
         </div>
       </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 KR.GEEK. ALL RIGHTS RESERVED.</div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="reviews section-gap padding-lr full-bleed">
+      <h2><span>진짜 후기</span></h2>
+      <div class="review-grid">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>“합정 셔츠룸 중에 여기가 제일 분위기 좋아. 인테리어가 완전 내 스타일. 셔츠도 깔끔하고.”</blockquote>
+          <div class="author">
+            <span class="name">형진맘</span>
+            <span>2025.03.12</span>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>“친구랑 갔는데 둘 다 깜놀. 생각보다 훨씬 세련됐어. 거친 감성 좋아하는 사람들한테 강추.”</blockquote>
+          <div class="author">
+            <span class="name">합정족발</span>
+            <span>2025.02.28</span>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★☆</div>
+          <blockquote>“주차가 좀 빡셌지만, 그걸 감수할 만한 곳. 셔츠룸 자체는 완전 만족. 다음에 또 올게.”</blockquote>
+          <div class="author">
+            <span class="name">밤샘작업</span>
+            <span>2025.02.14</span>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>“여기 오고 나서 다른 데는 눈에 안 들어와. 직원들도 친절하고, 분위기가 진짜 예술이야.”
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
       <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">지적 인문 철학 독자들을 위해 준비한 백링크 대행 사이트 통합 안내 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
       </div>
-    </footer>
+      <a href="posts/juice-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">지적 인문 철학 독자들을 위해 준비한 백링크 대행 사이트 통합 안내 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">바뤼흐 스피노자의 에티카(Ethica) 속 동물의 코나투스(Conatus)와 비주류 정서론 분석</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">질 들뢰즈의 리좀(Rhizome) 공간 역학으로 조망한 아날로그 골목길의 인문 구조학</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">중세 스콜라 철학의 영적 통신 논쟁: 천사들의 비물질적 메시지 전달 속도와 주파수</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">합정 셔츠룸 추천 처음 알아볼 때 실제로 많이 묻는 질문 5가지</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">제목: 창업 실패의 진실, 원가 분석으로 답하다 아, 진짜... 합정 셔츠룸 업계에서 월매출 3000원 찍고도 6개월 만에 폐업한 가격대별 원가 구조와 마진율 분포를 어떻게 이해해야 하나요? 관점 강제: 전직 업주로써, 저는 매달 수익이 줄면서 결국은 사업을 접해야만 </p>
+      </div>
+      <a href="posts/qa-002-rzdktu.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
   </div>
+</section>
 </body>
 </html>
